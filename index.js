@@ -8,12 +8,9 @@ app.use(express.static('public'));
 
 
 //Rutas
-//app.get('/',(req,res) => {
-//    res.json({
-//        ok: true,
-//        msg: "Recibido",
-//    });
-//});
+//TODO: Auth: Información de usuario para autorizaciones
+app.use('/api/auth', require('./routes/auth'));
+
 
 //Configuración del puerto
 app.listen(process.env.PORT,() => {
